@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat Tech - Farmer Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block dashboard-nav">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <h5 class="text-white">Farmer Dashboard</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-egg-fried"></i> My Livestock
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-cart-plus"></i> Sell Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-graph-up"></i> Market Trends
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-file-earmark-text"></i> Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-people"></i> Retailers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-gear"></i> Settings
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link text-danger" href="../index.html">
+                                <i class="bi bi-box-arrow-left"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-10 ms-sm-auto px-md-4">
+                <div class="dashboard-header d-flex justify-content-between align-items-center">
+                    <h2>Dashboard</h2>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> Farmer User
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../index.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="card text-white bg-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Livestock</h5>
+                                    <h2 class="card-text">142</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-success">
+                                <div class="card-body">
+                                    <h5 class="card-title">Active Orders</h5>
+                                    <h2 class="card-text">8</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-warning">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pending Orders</h5>
+                                    <h2 class="card-text">3</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Revenue</h5>
+                                    <h2 class="card-text">$4,250</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>Recent Orders</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order ID</th>
+                                                    <th>Product</th>
+                                                    <th>Buyer</th>
+                                                    <th>Quantity</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#MT-1001</td>
+                                                    <td>Goat Meat</td>
+                                                    <td>Retailer A</td>
+                                                    <td>50kg</td>
+                                                    <td><span class="badge bg-success">Completed</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#MT-1002</td>
+                                                    <td>Beef</td>
+                                                    <td>Retailer B</td>
+                                                    <td>30kg</td>
+                                                    <td><span class="badge bg-warning">Pending</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#MT-1003</td>
+                                                    <td>Chicken</td>
+                                                    <td>Customer X</td>
+                                                    <td>10kg</td>
+                                                    <td><span class="badge bg-primary">Processing</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>Quick Actions</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="bi bi-plus-circle"></i> Add New Livestock
+                                        </button>
+                                        <button class="btn btn-success" type="button">
+                                            <i class="bi bi-cart-plus"></i> Create New Listing
+                                        </button>
+                                        <button class="btn btn-info" type="button">
+                                            <i class="bi bi-graph-up"></i> View Market Trends
+                                        </button>
+                                        <button class="btn btn-warning" type="button">
+                                            <i class="bi bi-envelope"></i> Contact Support
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Cold Storage Updates</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="alert alert-success">
+                                        <strong>Beef:</strong> 120kg at -18°C (Optimal)
+                                    </div>
+                                    <div class="alert alert-warning">
+                                        <strong>Goat Meat:</strong> 80kg at -12°C (Needs Attention)
+                                    </div>
+                                    <div class="alert alert-danger">
+                                        <strong>Chicken:</strong> 50kg at -5°C (Critical)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

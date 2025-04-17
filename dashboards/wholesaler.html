@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat Tech - Wholesaler Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block dashboard-nav">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <h5 class="text-white">Wholesaler Dashboard</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-cart-plus"></i> Purchase
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-shop"></i> Sell to Retailers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-building"></i> Warehouse
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-snow"></i> Cold Storage
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-graph-up"></i> Analytics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-gear"></i> Settings
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link text-danger" href="../index.html">
+                                <i class="bi bi-box-arrow-left"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-10 ms-sm-auto px-md-4">
+                <div class="dashboard-header d-flex justify-content-between align-items-center">
+                    <h2>Dashboard</h2>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> Wholesaler User
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../index.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="card text-white bg-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title">Weekly Sales</h5>
+                                    <h2 class="card-text">$12,500</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-success">
+                                <div class="card-body">
+                                    <h5 class="card-title">Active Retailers</h5>
+                                    <h2 class="card-text">24</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-warning">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pending Orders</h5>
+                                    <h2 class="card-text">8</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Storage Capacity</h5>
+                                    <h2 class="card-text">75%</h2>
+                                    <a href="#" class="text-white">View details <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5>Recent Orders from Retailers</h5>
+                                    <button class="btn btn-sm btn-primary">New Purchase Order</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order ID</th>
+                                                    <th>Retailer</th>
+                                                    <th>Products</th>
+                                                    <th>Quantity</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#WS-4001</td>
+                                                    <td>Retailer A</td>
+                                                    <td>Beef, Goat Meat</td>
+                                                    <td>100kg</td>
+                                                    <td><span class="badge bg-success">Completed</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#WS-4002</td>
+                                                    <td>Retailer B</td>
+                                                    <td>Chicken, Beef</td>
+                                                    <td>150kg</td>
+                                                    <td><span class="badge bg-warning">Processing</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">Process</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#WS-4003</td>
+                                                    <td>Retailer C</td>
+                                                    <td>Goat Meat</td>
+                                                    <td>80kg</td>
+                                                    <td><span class="badge bg-primary">Pending</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">Confirm</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Purchase from Agro Farms</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order ID</th>
+                                                    <th>Agro Farm</th>
+                                                    <th>Products</th>
+                                                    <th>Quantity</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#PO-1001</td>
+                                                    <td>Agro Farm X</td>
+                                                    <td>Premium Beef</td>
+                                                    <td>200kg</td>
+                                                    <td><span class="badge bg-success">Delivered</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#PO-1002</td>
+                                                    <td>Agro Farm Y</td>
+                                                    <td>Goat Meat</td>
+                                                    <td>150kg</td>
+                                                    <td><span class="badge bg-info">In Transit</span></td>
+                                                    <td><a href="#" class="btn btn-sm btn-outline-primary">Track</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>Cold Storage Monitoring</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <h6>Beef Storage</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%">65%</div>
+                                        </div>
+                                        <small>Temperature: -18°C (Optimal)</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Goat Storage</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%">85%</div>
+                                        </div>
+                                        <small>Temperature: -15°C (Warning)</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Poultry Storage</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 92%">92%</div>
+                                        </div>
+                                        <small>Temperature: -12°C (Critical)</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary w-100">View All Storage</button>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Quick Actions</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="bi bi-cart-plus"></i> New Purchase
+                                        </button>
+                                        <button class="btn btn-success" type="button">
+                                            <i class="bi bi-shop"></i> Sell to Retailers
+                                        </button>
+                                        <button class="btn btn-info" type="button">
+                                            <i class="bi bi-building"></i> Warehouse
+                                        </button>
+                                        <button class="btn btn-warning" type="button">
+                                            <i class="bi bi-snow"></i> Cold Storage
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
